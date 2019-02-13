@@ -2,16 +2,16 @@
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
         <%= image_tag 'profile', class:"img-fluid mb-5 d-block mx-auto", alt:"" %>
-        <h1 class="text-uppercase mb-0">Start Bootstrap</h1>
+        <h1 class="text-uppercase mb-0"><%= t('my_name') %></h1>
         <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
+        <h2 class="font-weight-light mb-0"><%= t('catchphrase') %></h2>
       </div>
     </header>
 
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0"><%= t('portfolio') %></h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-md-6 col-lg-4">
@@ -81,7 +81,7 @@
     <!-- About Section -->
     <section class="bg-primary text-white mb-0" id="about">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
+        <h2 class="text-center text-uppercase text-white"><%= t('about') %></h2>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
@@ -103,7 +103,7 @@
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0"><%= t('contact') %></h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -112,36 +112,36 @@
             <form name="sentMessage" id="contactForm" novalidate="novalidate">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                  <label><%= t('name_holder') %></label>
+                  <input class="form-control" id="name" type="text" placeholder=<%= t('name_holder') %> required="required" data-validation-required-message=<%= t('name_message') %>>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                  <label><%= t('email_holder') %></label>
+                  <input class="form-control" id="email" type="email" placeholder=<%= t('email_holder') %> required="required" data-validation-required-message=<%= t('name_message') %>>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                  <label><%= t('phone_holder') %></label>
+                  <input class="form-control" id="phone" type="tel" placeholder=<%= t('phone_holder') %> required="required" data-validation-required-message=<%= t('phone_message') %>>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <label><%= t('message_holder') %></label>
+                  <textarea class="form-control" id="message" rows="5" placeholder=<%= t('message_holder') %> required="required" data-validation-required-message=<%= t('message_message') %>></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton"><%= t('send') %></button>
               </div>
             </form>
           </div>
@@ -154,12 +154,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
+            <h4 class="text-uppercase mb-4"><%= t('location') %></h4>
+            <p class="lead mb-0"><%= t('address_1') %>
+              <br><%= t('address_2') %></p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <h4 class="text-uppercase mb-4"><%= t('web') %></h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
@@ -173,25 +173,19 @@
               </li>
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-twitter"></i>
+                  <i class="fab fa-fw fa-instagram"></i>
                 </a>
-              </li>
+              </li>              
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
                   <i class="fab fa-fw fa-linkedin-in"></i>
                 </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
-                </a>
-              </li>
             </ul>
           </div>
           <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            <!--<h4 class="text-uppercase mb-4">About Freelancer</h4> -->
+            <p class="lead mb-0"><%= t('catchphrase_2') %></p>
+            <p><%= t('catchphrase_author') %></p>
           </div>
         </div>
       </div>
@@ -199,7 +193,7 @@
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2018</small>
+        <small><%= t('copyright') %></small>
       </div>
     </div>
 
